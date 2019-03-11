@@ -1,0 +1,88 @@
+---
+title: "HW6: Sections 7.1, 7.2, 7.3, 7.4.1, and 7.4.2"
+author: "Your Name Here"
+output: pdf_document
+---
+
+The code below just loads some packages and makes it so that enough digits are printed that you won't get confused by rounding errors.
+
+```{r, message = FALSE}
+library(dplyr) # functions like summarize
+library(ggplot2) # for making plots
+library(mosaic) # convenient interface to t.test function
+library(readr)
+
+options("pillar.sigfig" = 10) # print 10 significant digits in summarize output
+```
+
+## Brain activity in string instrument players: adapted from Sleuth3 Problem 7.28
+
+Studies over the past two decades have shown that activity can effect the reorganization of the human central nervous system. For example, it is known that the part of the brain associated with activity of a finger or limb is taken over for other purposes in individuals whose limb or finger has been lost. In one study, psychologiests used magnetic source imaging (MSI) to measure neuronal activity in the brains of nine string players (six violinists, two cellists, and a guitar player) and six controls who had never played a musical instrument, when the thumb and fifth finger of the left hand were exposed to mild stimulation.  The researchers felt that stringed instrument players, who use the fingers of their left hand extensively, might show different behavior in the brain -- as a result of this extensive physical activity -- than individuals who did not play stringed isntruments.
+
+The R code below reads in the data, which contains two variables:
+
+ * `Years` is the number of years the individual has played a stringed instrument (0 for people in the control group)
+ * `Activity` is a summary measure of neuronal activity from the MSI; a higher value indicates more neuronal activity.
+
+```{r}
+strings <- read.csv("http://www.evanlray.com/data/sleuth3/ex0728_string_instruments_brain_activity.csv")
+```
+
+#### (a) Is it possible to draw causal inferences about the relationship between the number of years someone has played a stringed instrument and their neuronal activity when the left hand is stimulated based on this study design?  Explain.
+
+
+
+#### (b) Create a scatterplot of the data set with the explanatory variable on the horizontal axis and the response on the vertical axis.
+
+```{r}
+
+```
+
+#### (c) What is the estimated equation of the line describing the relationship between the number of years someone has played a stringed instrument and their neuronal activity when the left hand is stimulated based on this data set?
+
+```{r}
+
+```
+
+#### (d) What are the interpretations of the estimated intercept and slope?  Please interpret the coefficient estimates in context.
+
+
+
+#### (e) Find a 97.5% confidence interval for the intercept, $\beta_0$, by using the estimate and its standard error from the linear model fit summary output and results from an appropriate call to `qt`.  If you want, you can also double check your answer with a call to `confint`.  No need to interpret the interval in context or discuss.
+
+```{r}
+
+```
+
+#### (f) Find the estimated mean level of neuronal activity for people who have been playing string instruments for 5 years.  You should do this "by hand" using the estimated equation from part (c).
+
+
+
+#### (g) Find a set of two Bonferroni adjusted confidence intervals for the mean level of neuronal activity for people who have never played a string instrument, and for people who have been playing string instruments for 5 years.  Your intervals should have a familywise confidence level of 95%.  You can use the `predict` function, no need to do this by hand.  You do not need to discuss or interpret the intervals in this part.
+
+```{r}
+
+```
+
+#### (h) Interpret your intervals from part (g) as a family.  As part of your answer, include a description of the phrase "95% confident" in the context of familywise intervals.
+
+
+
+#### (i) Explain in a sentence or two how your result from part (g) for the mean among people who have never played a string instrument relates to the confidence interval for the intercept from part (e).
+
+
+
+#### (j) Make another scatterplot of the data, this time including the estimated regression line and Scheffe-based 95% confidence bands.
+
+```{r}
+
+```
+
+#### (k) Explain how to interpret the Scheffe-based confidence bands in part (j).
+
+
+
+#### (l) Conduct a hypothesis test of the claim that there is no association between the number of years someone has played a string instrument and their expected/mean level of neuronal activity as measured by the MSI.  State your hypotheses using equations and a written sentence explaining the meaning of the hypotheses, and interpret your results in context.
+
+
+
